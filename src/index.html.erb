@@ -1,0 +1,15 @@
+name: 'Home'
+variable: '@root_page'
+---
+<title>Example Static Site</title>
+
+<%# <link href="/stylesheet.css" rel="stylesheet" type="text/css"> %>
+
+<h1>Mah Pages</h1>
+
+<ul>
+  <% @pages.each do |page| %>
+    <% next if page[:name] == 'Home' %>
+    <li><%= link page %></li>
+  <% end %>
+</ul>
